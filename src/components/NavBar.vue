@@ -1,12 +1,16 @@
 <template>
-    <header class="grid grid-flow-col grid-cols-1 sticky top-0 bg-app-primary shadow-lg">
-        <nav class="columns-sm flex flex-col sm:flex-row items-center gap-4 text-white p-6">
+    <header class="sticky top-0 bg-app-primary shadow-md">
+        <nav class="flex flex-row gap-4 text-white p-6">
             <RouterLink v-bind:to="{ name: 'home' }">
                 <div class="flex items-center gap-3">
+                    <i class="fa-solid fa-gear text-2xl"></i>
                     <p class="text-2xl">Shed Controller App</p>
                 </div>
             </RouterLink>
-            <div class="flex gap-3 flex-1 justify-end" v-on:click="toggleModal">III</div>
+            <div class="flex gap-3 flex-1 justify-end" v-on:click="toggleModal">
+                <i class="fa-solid fa-circle-info text-xl hover:text-app-secondary"></i>
+                <i class="fa-solid fa-plus text-xl hover:text-app-secondary"></i>
+            </div>
 
             <base-modal v-bind:modal-active="modalActive" v-on:close-modal="toggleModal">
                 <div class="text-black">

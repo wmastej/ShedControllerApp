@@ -1,15 +1,45 @@
+/* 
+https://www.youtube.com/watch?v=bupetqS1SMU
 
+prefixes are supported in tailwind
+
+example 
+@import "tailwindcss" prefix(tw);
+
+example:
+<h1 className='tw:text-yellow-500'></h1>
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
+
+@font-face {
+    font-family: audiowide;
+    src: url("../assets/fonts/Audiowide-Regular.ttf");
+}
 
 
 @theme {
+    --breakpoint-*: initial;
+    --breakpoint-sm: "640px";
+    --breakpoint-md: "768px";
 
-    /* --font-display: "Oswald", "sans-serif";
-    --font-roboto: "roboto"; */
+
+    --font-audio-wide: "audiowide";
+    --font-roboto: "Roboto", "sans-serif";
+
 
     --color-app-primary: #00668A;
     --color-app-secondary: #004E71;
 
 
+    /* --container-4xs: 2rem; */
 }
 
+@utility container {
+    
+    justify-contenr: center;
+    
+
+}
